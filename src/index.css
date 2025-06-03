@@ -25,16 +25,19 @@
 
 /* Mode clair */
 .light {
-  --dark-bg: #ffffff;
-  --darker-bg: #ffffff;
+  --dark-bg: #f8f9fa;            /* Fond principal légèrement grisé */
+  --darker-bg: #f0f2f5;          /* Fond sidebar légèrement plus foncé */
   --card-bg: rgba(255, 255, 255, 1);
   --text-primary: #333333;
   --text-secondary: #444444;
   --text-muted: #666666;
-  --border-color: rgba(230, 230, 230, 1);
-  --shadow-color: rgba(0, 0, 0, 0.05);
-  --card-highlight: rgba(106, 17, 203, 0.03);
+  --border-color: rgba(106, 17, 203, 0.2); /* Bordure plus visible */
+  --shadow-color: rgba(0, 0, 0, 0.08);     /* Ombre plus prononcée */
+  --card-highlight: rgba(106, 17, 203, 0.05); /* Mise en évidence plus visible */
   --input-bg: rgba(248, 248, 248, 1);
+  --menu-hover-bg: rgba(106, 17, 203, 0.08); /* Nouvelle couleur pour survol des menus */
+  --submenu-bg: rgba(240, 242, 245, 0.95);   /* Fond des sous-menus */
+  --active-item-bg: rgba(106, 17, 203, 0.12); /* Fond des éléments actifs */
 }
 
 body {

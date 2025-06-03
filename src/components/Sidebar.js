@@ -27,9 +27,9 @@ const SidebarContainer = styled.div`
   transition: background 0.3s ease, color 0.3s ease;
   
   .light & {
-    background: #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-    border-right: 1px solid #f0f0f0;
+    background: var(--darker-bg);
+    box-shadow: 0 0 20px var(--shadow-color);
+    border-right: 1px solid var(--border-color);
   }
   
   @media (max-width: 768px) {
@@ -49,7 +49,7 @@ const TopBar = styled.div`
   border-bottom: 1px solid #2d2d42;
   
   .light & {
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--border-color);
   }
 `;
 
@@ -73,7 +73,7 @@ const ThemeToggle = styled.button`
   }
   
   .light &:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--menu-hover-bg);
   }
   
   svg {
@@ -138,19 +138,24 @@ const MenuItem = styled.div`
   
   .light & {
     &:hover {
-      background: #f8f9fa;
+      background: var(--menu-hover-bg);
       border-left: 3px solid var(--primary-color);
       box-shadow: none;
     }
     
     &.active {
-      background: #f8f9fa;
+      background: var(--active-item-bg);
       border-left: 3px solid var(--primary-color);
     }
     
     svg {
       color: var(--primary-color);
-      filter: none;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover svg {
+      opacity: 1;
     }
   }
   
@@ -207,9 +212,9 @@ const SubMenu = styled.div`
   z-index: 1;
   
   .light & {
-    background: rgba(248, 249, 250, 0.9);
-    border-left: 1px solid rgba(106, 17, 203, 0.2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    background: var(--submenu-bg);
+    border-left: 1px solid var(--border-color);
+    box-shadow: inset 0 0 10px rgba(106, 17, 203, 0.03);
   }
 `;
 
@@ -230,9 +235,14 @@ const SubMenuItem = styled.div`
   
   .light & {
     &:hover {
-      background: rgba(106, 17, 203, 0.1);
+      background: var(--menu-hover-bg);
       border-left: 2px solid var(--primary-color);
       box-shadow: none;
+    }
+
+    &.active {
+      background: var(--active-item-bg);
+      border-left: 2px solid var(--secondary-color);
     }
   }
   
